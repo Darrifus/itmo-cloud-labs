@@ -3,4 +3,4 @@
 * Усольцева Дарья
 * Забродский Александр
 * Азатжонова Мехринисо
- 
+ ![1b4c1f1ba397db173d0a112d89a0cf38](https://github.com/user-attachments/assets/e4da7173-ec3f-48ce-a409-f11b2ab3b2c7)
