@@ -70,7 +70,8 @@
 
 Снова делаем запрос и видим, что все работает!
 
-<img src="https://github.com/user-attachments/assets/67de1e97-d65b-45ac-9a3b-8dc902128b09](https://github.com/user-attachments/assets/60956359-280c-4293-9a2f-0389b60b7767" width="600" height="350">
+<img src="https://github.com/user-attachments/assets/1ab809f2-c627-4469-8101-35077f064cd2" width="600" height="350">
+
 
 
 Вот так мы настроили сайты, выполнили лабу и теперь смотрим на котика :)
