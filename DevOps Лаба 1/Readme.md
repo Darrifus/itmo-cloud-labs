@@ -16,54 +16,61 @@
 
 Теперь у нас есть собственный веб-сервер, но на нем пока что ничего нет:
 
-![2 - nginx работает!](https://github.com/user-attachments/assets/35386db8-95aa-40ef-bf2f-b9423dbdf56a)
+<img src="https://github.com/user-attachments/assets/35386db8-95aa-40ef-bf2f-b9423dbdf56a" width="600" height="350">
 
 Создаем локальные сайты `project1` и `project2`, директории для их хранения и файлы `index.html` внутри: 
 
-![5 - работа с доменами](https://github.com/user-attachments/assets/a6dff40b-e58b-433e-bacb-0e56db1ca9e9)
+<img src="https://github.com/user-attachments/assets/a6dff40b-e58b-433e-bacb-0e56db1ca9e9" width="600" height="350">
 
 Чтобы наши хосты можно было тестировать локально, прописываем домены `project1.local` и `project2.local` в файле `/etc/hosts`. Присвоим им один адрес, чтобы оба доменных имени обслуживались на одном сервере nginx:
 
-![4 - настройка доменов](https://github.com/user-attachments/assets/b4e1dda3-16bf-4100-b3cd-d7bbe82ae67f)
+<img src="https://github.com/user-attachments/assets/b4e1dda3-16bf-4100-b3cd-d7bbe82ae67f" width="600" height="350">
 
 Открываем файлы конфигурации для данных проектов и начинаем их настройку. Сначала определяем имя `server_name` для каждого проекта, чтобы обозначить, для какого доменного имени сервер будет обрабатывать запросы, и указываем, что сервер будет слушать запросы http на порту 80, а затем постоянно перенаправлять их на https (данные действия покажем на project1, для project2 все проделаем аналогично):
 
-![6 -Перенаправляем http на https](https://github.com/user-attachments/assets/80feae01-0f2c-4abd-966f-c939723e6a00)
+<img src="https://github.com/user-attachments/assets/80feae01-0f2c-4abd-966f-c939723e6a00" width="600" height="350">
 
 
 После того, как сделали перенаправление, открываем блок, который будет работать уже с https и продолжаем дальнейшую настройку в нем. Так как сайт должен работать с сертификатом, используем опцию ssl и укажем пути к файлам ssl, а сами самоподписные сертификаты сгенерируем чуть позже. Также обозначим корневую директорию для сайта и установим `index.html` как главную страницу:
 
-![7 - верный](https://github.com/user-attachments/assets/11c25e45-a514-4d2e-872b-853060ee6c0b)
+<img src="https://github.com/user-attachments/assets/11c25e45-a514-4d2e-872b-853060ee6c0b" width="600" height="350">
+
 
 Теперь нужно 'включить' наши сайты, то есть сделать конфигурации активными:
 
-![8 - активируем конфигурации](https://github.com/user-attachments/assets/caba9263-1d0e-45fc-a9b9-07b9cead5633)
+<img src="https://github.com/user-attachments/assets/caba9263-1d0e-45fc-a9b9-07b9cead5633" width="600" height="350">
 
 И, конечно, не забываем создать самоподписные сертификаты:
 
-![9 - создаем самоподписные сертификаты ssl](https://github.com/user-attachments/assets/199936c3-49ce-40cb-84d8-47d437302840)
+<img src="https://github.com/user-attachments/assets/199936c3-49ce-40cb-84d8-47d437302840" width="600" height="350">
+
 
 Проверяем, что все работает, и перезапускаем систему:
 
-![10 - проверяем что конфигурация верна](https://github.com/user-attachments/assets/16c11e58-d98d-4cbe-aa90-c6ad41451563)
+<img src="https://github.com/user-attachments/assets/16c11e58-d98d-4cbe-aa90-c6ad41451563" width="600" height="350">
+
 
 Попытаемся сделать запрос к стартовой странице по http и видим, что нас перенаправило на https (ЭТО НЕ МОНТАЖ ЧЕСТНО!!!). Так мы убедились, что проекты открываются и работают:
 
-![11 - пробуем ввести http](https://github.com/user-attachments/assets/bbb56543-a597-4b3e-96a2-c28d4661ee86)
-
-![12 - нас отправило на https](https://github.com/user-attachments/assets/cf356285-263c-4622-907a-8e0e946d3f1d)
+<img src="https://github.com/user-attachments/assets/bbb56543-a597-4b3e-96a2-c28d4661ee86" width="600" height="350">
 
 
-Первоначальная настройка сайтов произведена. А теперь добавим в наш сайт папку `media` (сделаем эти действия для project2, с project1 все работает аналогично), ее директория `/var/www/project2.local/media/`, и положим туда фотокарточку котика. Если на данном этапе мы захотим посмотреть на котика и сделать запрос к фотокарточке, у нас ничего не выйдет: 
+<img src="https://github.com/user-attachments/assets/cf356285-263c-4622-907a-8e0e946d3f1d" width="600" height="350">
 
-![15 - картинки нет](https://github.com/user-attachments/assets/f6372df0-837c-4674-9d8a-1b85c4f24b7b)
+
+
+Первоначальная настройка сайтов произведена. А теперь добавим в наш сайт папку `media` (сделаем эти действия для project2, с project1 все работает аналогично), ее директория `/var/www/project2.local/media/`, и положим туда фотокарточку котика. Если на данном этапе мы захотим посмотреть на котика и сделать запрос к фотокарточке, у нас ничего не выйдет:
+
+<img src="https://github.com/user-attachments/assets/f6372df0-837c-4674-9d8a-1b85c4f24b7b" width="600" height="350">
+
 
 Суть проблемы очевидна: в корневой папке у нас указана иная дериктория (`/var/www/project1.local/html/`), и поиск папки `media` происходит внутри нее, хотя на самом деле она хранится в другом месте. Используем `alias`, чтобы создать псевдоним к папке `media` и получить доступ к нашему котику:
 
-![15 - вернули alias](https://github.com/user-attachments/assets/f4ba8670-b691-42b7-acaa-1415c261c45a)
+<img src="https://github.com/user-attachments/assets/f4ba8670-b691-42b7-acaa-1415c261c45a" width="600" height="350">
 
 Снова делаем запрос и видим, что все работает!
 
-![15 - вернулся котик](https://github.com/user-attachments/assets/60956359-280c-4293-9a2f-0389b60b7767)
+<img src="https://github.com/user-attachments/assets/67de1e97-d65b-45ac-9a3b-8dc902128b09](https://github.com/user-attachments/assets/60956359-280c-4293-9a2f-0389b60b7767" width="600" height="350">
+
 
 Вот так мы настроили сайты, выполнили лабу и теперь смотрим на котика :)
