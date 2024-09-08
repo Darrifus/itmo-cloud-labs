@@ -10,9 +10,9 @@
 * Забродский Александр
 * Азатжонова Мехринисо
 ## Выполнение лабы:
-Сначала производим установку nginx. Делать это мы будем на ОС Linux, используя Virtualbox:
+Сначала производим установку nginx. Делать это мы будем на ОС Linux, используя Virtualbox:<img src="" width="200" height="150">
 
-![1 - установка nginx](https://github.com/user-attachments/assets/67de1e97-d65b-45ac-9a3b-8dc902128b09)
+<img src="https://github.com/user-attachments/assets/67de1e97-d65b-45ac-9a3b-8dc902128b09" width="200" height="150">
 
 Теперь у нас есть собственный веб-сервер, но на нем пока что ничего нет:
 
