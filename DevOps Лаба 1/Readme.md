@@ -38,7 +38,7 @@
 
 Теперь нужно 'включить' наши сайты, то есть сделать конфигурации активными:
 
-<img src="https://github.com/user-attachments/assets/caba9263-1d0e-45fc-a9b9-07b9cead5633" width="700" height="150">
+<img src="https://github.com/user-attachments/assets/caba9263-1d0e-45fc-a9b9-07b9cead5633" width="800" height="100">
 
 И, конечно, не забываем создать самоподписные сертификаты:
 
@@ -47,7 +47,7 @@
 
 Проверяем, что все работает, и перезапускаем систему:
 
-<img src="https://github.com/user-attachments/assets/16c11e58-d98d-4cbe-aa90-c6ad41451563" width="600" height="350">
+<img src="https://github.com/user-attachments/assets/16c11e58-d98d-4cbe-aa90-c6ad41451563" width="800" height="100">
 
 
 Попытаемся сделать запрос к стартовой странице по http и видим, что нас перенаправило на https (ЭТО НЕ МОНТАЖ ЧЕСТНО!!!). Так мы убедились, что проекты открываются и работают:
