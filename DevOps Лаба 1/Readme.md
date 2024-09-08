@@ -12,7 +12,7 @@
 ## Выполнение лабы:
 Сначала производим установку nginx. Делать это мы будем на ОС Linux, используя Virtualbox:
 
-<img src="https://github.com/user-attachments/assets/67de1e97-d65b-45ac-9a3b-8dc902128b09" width="700" height="350">
+<img src="https://github.com/user-attachments/assets/67de1e97-d65b-45ac-9a3b-8dc902128b09" width="600" height="350">
 
 Теперь у нас есть собственный веб-сервер, но на нем пока что ничего нет:
 
