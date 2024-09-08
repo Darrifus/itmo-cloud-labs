@@ -20,7 +20,7 @@
 
 Создаем локальные сайты `project1` и `project2`, директории для их хранения и файлы `index.html` внутри: 
 
-<img src="https://github.com/user-attachments/assets/a6dff40b-e58b-433e-bacb-0e56db1ca9e9" width="300" height="350">
+<img src="https://github.com/user-attachments/assets/a6dff40b-e58b-433e-bacb-0e56db1ca9e9" width="700" height="150">
 
 Чтобы наши хосты можно было тестировать локально, прописываем домены `project1.local` и `project2.local` в файле `/etc/hosts`. Присвоим им один адрес, чтобы оба доменных имени обслуживались на одном сервере nginx:
 
