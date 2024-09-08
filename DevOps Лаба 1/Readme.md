@@ -76,7 +76,7 @@
 
 Вот так мы настроили сайты, выполнили лабу и теперь смотрим на котика :)
 
-##Это мы отдыхаем
+## Это мы отдыхаем
 
-<img src="https://github.com/user-attachments/assets/4c34de28-b02a-4168-b73c-737d4d1b3840" width="500" height="500">
+<img src="https://github.com/user-attachments/assets/4c34de28-b02a-4168-b73c-737d4d1b3840" width="400" height="400">
 
