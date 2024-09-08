@@ -38,7 +38,7 @@
 
 Теперь нужно 'включить' наши сайты, то есть сделать конфигурации активными:
 
-<img src="https://github.com/user-attachments/assets/caba9263-1d0e-45fc-a9b9-07b9cead5633" width="800" height="100">
+<img src="https://github.com/user-attachments/assets/caba9263-1d0e-45fc-a9b9-07b9cead5633" width="800" height="50">
 
 И, конечно, не забываем создать самоподписные сертификаты:
 
