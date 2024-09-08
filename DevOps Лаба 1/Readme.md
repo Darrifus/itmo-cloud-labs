@@ -47,7 +47,7 @@
 
 Проверяем, что все работает, и перезапускаем систему:
 
-<img src="https://github.com/user-attachments/assets/16c11e58-d98d-4cbe-aa90-c6ad41451563" width="800" height="100">
+<img src="https://github.com/user-attachments/assets/16c11e58-d98d-4cbe-aa90-c6ad41451563" width="800" height="70">
 
 
 Попытаемся сделать запрос к стартовой странице по http и видим, что нас перенаправило на https (ЭТО НЕ МОНТАЖ ЧЕСТНО!!!). Так мы убедились, что проекты открываются и работают:
