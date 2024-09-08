@@ -9,6 +9,7 @@
 Сначала производим установку nginx. Делать это мы будем на ОС Linux, используя Virtualbox:
 
 ![1 - установка nginx](https://github.com/user-attachments/assets/67de1e97-d65b-45ac-9a3b-8dc902128b09)
+
 Теперь у нас есть собственный веб-сервер, но на нем пока что ничего нет:
 
 ![2 - nginx работает!](https://github.com/user-attachments/assets/35386db8-95aa-40ef-bf2f-b9423dbdf56a)
