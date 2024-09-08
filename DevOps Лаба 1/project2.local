@@ -1,0 +1,25 @@
+server {
+    listen 80;
+    server_name project2.local;
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+server {
+    listen 443 ssl;
+    server_name project2.local;
+
+    ssl_certificate /etc/ssl/certs/project2.local.crt;
+    ssl_certificate_key /etc/ssl/private/project2.local.key;
+
+    root /var/www/project2.local/html;
+    index index.html;
+
+    location /media/ {
+        alias /var/www/project2.local/media/;
+    }
+
+  
+}
