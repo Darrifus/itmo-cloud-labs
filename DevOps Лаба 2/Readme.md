@@ -111,5 +111,4 @@
 
 ## Это мы отдыхаем
 
-<img src="https://github.com/user-attachments/assets/4c34de28-b02a-4168-b73c-737d4d1b3840" width="400" height="400">
-
+<img src="https://github.com/user-attachments/assets/70c901dd-7e51-47b9-995e-24ee8c16c31e" width="400" height="400">
