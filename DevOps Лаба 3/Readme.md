@@ -71,17 +71,19 @@
 ### История про Васю
 Мы до прочтения истории про Васю:
 
-![image](https://github.com/user-attachments/assets/2a50b505-a46c-44de-8252-6744e734130f)
+<img src="https://github.com/user-attachments/assets/2a50b505-a46c-44de-8252-6744e734130f" width="350" />
 
 Мы после прочтения истории про Васю:
 
-![image](https://github.com/user-attachments/assets/91a17b86-54a2-4671-b32e-04619a0bd791)
+<img src="https://github.com/user-attachments/assets/91a17b86-54a2-4671-b32e-04619a0bd791" width="350" />
+
 
 ### Заключение
 1. "Плохой" CI/CD файл мы написали
 2. "Хороший" CI/CD файл мы написали
 3. 5 bad practices мы объяснили
 4. Исправленные 5 bad practices мы тоже объяснили
+
 А значит лаба выполнена!
 
 ## Это мы отдыхаем
