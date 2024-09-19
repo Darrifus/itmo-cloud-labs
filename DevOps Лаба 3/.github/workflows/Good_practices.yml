@@ -5,49 +5,40 @@ on:
     branches:
       - main
 
-stages:
-  - build
-  - test
-  - deploy
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Cache npm dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+      - name: Install dependencies
+        run: npm install
+      - name: Build application
+        run: npm run build
 
-build:
-  stage: build
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'
-    - name: Cache npm dependencies
-      uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-npm-
-    - name: Install dependencies
-      run: npm install
-    - name: Build application
-      run: npm run build
-
-test:
-  stage: test
-  runs-on: ubuntu-latest
-  needs: build
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Run tests
-      run: npm test
-
-deploy:
-  stage: deploy
-  runs-on: ubuntu-latest
-  needs: test
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Deploy application
-      run: ./deploy.sh
+  tests:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run tests
+        run: npm test
+  
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    environment: 
+      DEPLOY_PATH: /usr/share/nginx/html
+    steps:
+      - name: Deploy application
+        run: |
+          echo "Deploying to $DEPLOY_PATH"
+          ./deploy.sh
