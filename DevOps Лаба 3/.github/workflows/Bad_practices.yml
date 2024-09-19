@@ -11,13 +11,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Install dependencies
         run: npm install
-
       - name: Run tests
         run: npm test
-
       - name: Build application
         run: npm run build
         
@@ -26,7 +23,5 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Deploy application
-        run: |
-          ./deploy.sh
+        run: ./deploy.sh
