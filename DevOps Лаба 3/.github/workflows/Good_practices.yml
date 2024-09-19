@@ -16,12 +16,10 @@ build:
   steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '16'
-
     - name: Cache npm dependencies
       uses: actions/cache@v2
       with:
@@ -29,10 +27,8 @@ build:
         key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-npm-
-
     - name: Install dependencies
       run: npm install
-
     - name: Build application
       run: npm run build
 
@@ -43,7 +39,6 @@ test:
   steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
     - name: Run tests
       run: npm test
 
@@ -54,7 +49,5 @@ deploy:
   steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
     - name: Deploy application
-      run: |
-        ./deploy.sh
+      run: ./deploy.sh
