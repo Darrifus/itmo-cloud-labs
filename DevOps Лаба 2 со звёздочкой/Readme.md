@@ -17,7 +17,7 @@
 
 Готово, Docker compose установлен. Осталось только проверить это. 
 
-<img src="https://github.com/user-attachments/assets/1505f378-9088-4011-a900-f8530ef3da49" width="400" height="400">
+![net](https://github.com/Darrifus/itmo-cloud-labs/blob/main/DevOps%20%D0%9B%D0%B0%D0%B1%D0%B0%202/img1.png)
 
 Видим, что в консоли выводится версия установленного Docker compose. Значит, всё установленно и работает.
 
