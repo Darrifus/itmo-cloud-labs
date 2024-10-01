@@ -17,7 +17,7 @@
 
 Готово, Docker compose установлен. Осталось только проверить это. 
 
-![net](https://github.com/Darrifus/itmo-cloud-labs/blob/main/DevOps%20%D0%9B%D0%B0%D0%B1%D0%B0%202/img1.png)
+![net](https://github.com/Darrifus/itmo-cloud-labs/blob/main/DevOps%20%D0%9B%D0%B0%D0%B1%D0%B0%202%20%D1%81%D0%BE%20%D0%B7%D0%B2%D1%91%D0%B7%D0%B4%D0%BE%D1%87%D0%BA%D0%BE%D0%B9/Downloading-docker-cpmpose.png)
 
 Видим, что в консоли выводится версия установленного Docker compose. Значит, всё установленно и работает.
 
