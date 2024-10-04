@@ -10,7 +10,8 @@
 * Азатжонова Мехринисо
 
 ## Установка Docker compose
-Первым делом устанавливаем Docker compose на операционную систему. В нашем случае это Linux, а именно Ubuntu:24.04, запущенная через VirtualBox. Для того чтобы установить Docker compose, нужно открыть терминал и поочерёдно ввести команды:
+
+Первым делом устанавливаем Docker compose на операционную систему (docker уже есть из прошлой лабы). В нашем случае это Linux, а именно Ubuntu:24.04, запущенная через VirtualBox. Для того чтобы установить Docker compose, нужно открыть терминал и поочерёдно ввести команды:
 * mkdir -p ~/.docker/cli-plugins/
 * curl -SL https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
 * chmod +x ~/.docker/cli-plugins/docker-compose
