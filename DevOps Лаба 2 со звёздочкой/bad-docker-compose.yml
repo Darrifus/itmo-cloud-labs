@@ -1,0 +1,16 @@
+version: '3'
+services:
+  My_cont_1:
+    image: ubuntu:latest
+    container_name: cont1
+    privileged: true
+    volumes:
+      - ./scripts:/scripts
+    command: /bin/bash -c "apt-get update && apt-get install bash && apt-get install -y iputils-ping && bash /scripts/MyScript1.bash"
+  My_cont_2:
+    image: ubuntu:latest
+    container_name: cont2
+    privileged: true
+    volumes:
+      - ./scripts:/scripts
+    command: /bin/bash -c "apt-get update && apt-get install bash && apt-get install -y iputils-ping && bash /scripts/MyScript2.bash"

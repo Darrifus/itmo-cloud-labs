@@ -1,0 +1,31 @@
+version: '3'
+services:
+  My_cont_1:
+    networks:
+      - network1
+    image: ubuntu:22.04
+    privileged: false
+    volumes:
+      - ./script1:/container_folder:ro
+    command: >
+      /bin/bash -c
+      "apt-get update && apt-get install -y bash &&
+      apt-get install -y iputils-ping && bash /container_folder/MyScript1.bash"
+  My_cont_2:
+    networks:
+      - network2
+    image: ubuntu:22.04
+    privileged: false
+    volumes:
+      - ./script2:/container_folder:ro
+    command: >
+      /bin/bash -c
+      "apt-get update && apt-get install -y bash &&
+      apt-get install -y iputils-ping && bash /container_folder/MyScript2.bash"
+networks:
+  network1:
+    name: network1
+    driver: bridge
+  network2:
+    name: network2
+    driver: bridge
