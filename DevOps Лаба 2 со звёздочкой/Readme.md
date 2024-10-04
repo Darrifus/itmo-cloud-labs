@@ -41,11 +41,44 @@ Docker compose - это инструмент для работы с контей
 
 ### Плохой Docker compose файл
 
+Плохой docker-compose.yml:
+
+- version: '2'
+- services:
+-   My_cont_1:
+-     image: ubuntu:22.04
+-     privileged: false
+-     volumes:
+-       - ./script1:/container_folder:ro
+-     command: >
+-       /bin/bash -c
+-       "apt-get update && apt-get install -y bash &&
+-       apt-get install -y iputils-ping && bash /container_folder/MyScript1.bash"
+-   My_cont_2:
+-     image: ubuntu:22.04
+-     privileged: false
+-     volumes:
+-       - ./script2:/container_folder:ro
+-     command: >
+-       /bin/bash -c
+-       "apt-get update && apt-get install -y bash &&
+-       apt-get install -y iputils-ping && bash /container_folder/MyScript2.bash"
+
 Так как в последнем задании нам предстоит проверять связь между докерами, мы решили сделать два сервиса, которые выполняют простой скрипт на языке bash, который сначала выводит в консоль сообщение о том, что контейнер работает а также его номер, а потом с помощью утилиты ping проверяет соединение с интернетом, выполняя команду:
 
 - ping -c 2 8.8.8.8
 
 В данном случае опция -c 2 обозначает, что соединение с 8.8.8.8 будет происходить не до бесконечности, а только 2 раза.
+
+Файл MyScript1.bash, используемый в первом контейнере:
+
+- echo "Container 1 is working!"
+- ping -c 2 8.8.8.8
+
+Файл MyScript2.bash, используемый во втором контейнере:
+
+- echo "Container 2 is working!"
+- ping -c 2 8.8.8.8
 
 Далее опишем плохие практики, которые мы использовали при написании плохого Docker compose файла.
 
@@ -70,6 +103,27 @@ Docker compose - это инструмент для работы с контей
 Видим, что контейнеры работают, и выводят в консоль нужную информацию.
 
 ### Хороший Docker compose файл
+
+Хороший docker-compose.yml:
+
+- version: '3'
+- services:
+-   My_cont_1:
+-     image: ubuntu:latest
+-     container_name: cont1
+-     privileged: true
+-     volumes:
+-       - ./scripts:/scripts
+-     command: /bin/bash -c "apt-get update && apt-get install bash && apt-get install -y iputils-ping && bash /scripts/MyScript1.bash"
+-   My_cont_2:
+-     image: ubuntu:latest
+-     container_name: cont2
+-     privileged: true
+-     volumes:
+-       - ./scripts:/scripts
+-     command: /bin/bash -c "apt-get update && apt-get install bash && apt-get install -y iputils-ping && bash /scripts/MyScript2.bash"
+
+Файлы MyScript1.bash и MyScript2.bash остались такими же.
 
 По порядку опишем решения.
 
@@ -124,6 +178,50 @@ Docker compose - это инструмент для работы с контей
 
 - ping -c 2 <название директории>-<название контейнера>-1
 
+Теперь наши файлы MyScript1.bash и MyScript2.bash выглядят так:
+
+- echo "Container 1 is working!"
+- ping -c 2 good-My_cont_2-1
+- ping -c 2 8.8.8.8
+
+- echo "Container 2 is working!"
+- ping -c 2 good-My_cont_2-1
+- ping -c 2 8.8.8.8
+
+Файл docker-compose.yml выглядит так:
+
+- version: '3'
+- services:
+-   My_cont_1:
+-     networks:
+-       - network1
+-     image: ubuntu:22.04
+-     privileged: false
+-     volumes:
+-       - ./script1:/container_folder:ro
+-     command: >
+-       /bin/bash -c
+-       "apt-get update && apt-get install -y bash &&
+-       apt-get install -y iputils-ping && bash /container_folder/MyScript1.bash"
+-   My_cont_2:
+-     networks:
+-       - network2
+-     image: ubuntu:22.04
+-     privileged: false
+-     volumes:
+-       - ./script2:/container_folder:ro
+-     command: >
+-       /bin/bash -c
+-       "apt-get update && apt-get install -y bash &&
+-       apt-get install -y iputils-ping && bash /container_folder/MyScript2.bash"
+- networks:
+-   network1:
+-     name: network1
+-     driver: bridge
+-   network2:
+-     name: network2
+-     driver: bridge
+
 Показываем результаты:
 
 ![seti-1](https://github.com/user-attachments/assets/368129a1-678d-48da-a6e4-9a7caa886598)
@@ -132,13 +230,15 @@ Docker compose - это инструмент для работы с контей
 
 На скринах видно, что контейнеры друг между другом не пингуются. При этом соединение с интернетом у них есть и всё остальное тоже работает.
 
-Чтобы доказать, что раньше контейнеры пинговались, уберём все упоминания сетей из docker-compose.yml. Тогда контейнеры должны подсоединяться друг к другу по своей сети, значит и ping должен работать.
+Чтобы доказать, что раньше контейнеры пинговались, уберём все упоминания сетей из docker-compose.yml. Тогда контейнеры должны подсоединяться друг к другу по своей сети, значит и ping по имени контейнера должен должен работать. Из скриптов удаляем пинг к интернету, потому что он не нужен, а docker-compose.yml теперь такой же, как в примере с исправленными плохими практиками.
 
 ![ne-seti-1](https://github.com/user-attachments/assets/1987ced5-678e-44cb-8527-a2c92f755d24)
 
 ![ne-seti-1](https://github.com/user-attachments/assets/1d464ffd-479c-4ac3-9554-a77c06483c58)
 
-На этих скринах видно, что без сетей контейнеры прекрасно связаны, и передают между друг другом пакеты.
+На этих скринах видно, что без сетей контейнеры прекрасно связаны, и передают между друг другом пакеты. 1 пакет из 4 где-то потерялся, но это не важно.
+
+В общем видно, что раньше контейнеры были связаны, а теперь каждый подключен к своей собственной сети и не видит других контейнеров.
 
 ## Результаты
 
