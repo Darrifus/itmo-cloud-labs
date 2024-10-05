@@ -22,7 +22,8 @@ chmod +x ~/.docker/cli-plugins/docker-compose
 
 Готово, Docker compose установлен. Осталось только проверить это. 
 
-![net](https://github.com/Darrifus/itmo-cloud-labs/blob/main/DevOps%20%D0%9B%D0%B0%D0%B1%D0%B0%202%20%D1%81%D0%BE%20%D0%B7%D0%B2%D1%91%D0%B7%D0%B4%D0%BE%D1%87%D0%BA%D0%BE%D0%B9/Downloading-docker-cpmpose.png)
+![downloading](https://github.com/user-attachments/assets/09ca9db6-5c05-48cb-9517-abd4eeebbb90)
+
 
 Видим, что в консоли выводится версия установленного Docker compose. Значит, всё установленно и работает.
 
