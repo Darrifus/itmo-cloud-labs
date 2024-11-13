@@ -20,6 +20,8 @@
 
 ### Bad practices
 Рассмотрим файл CI/CD, в котором представлены "плохие практики", более подробно, чтобы для начала разобрать принцип  работы CI/CD. 
+
+
 ![image](https://github.com/user-attachments/assets/f937d99c-8f93-4e38-9f21-fcb4ca2f10a6)
 
 
@@ -49,7 +51,9 @@
 
 ### Good practices или как мы исправили Bad practices
 Исправленные практики представлены ниже:
+
 ![image](https://github.com/user-attachments/assets/85a4b453-ed62-4991-9fc2-3bea5fd9c1c9)
+
 ![image](https://github.com/user-attachments/assets/020caf8a-bf42-4536-b03c-cb91c6928f5c)
 
 
