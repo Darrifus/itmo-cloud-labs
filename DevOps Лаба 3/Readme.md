@@ -52,9 +52,11 @@
 ### Good practices или как мы исправили Bad practices
 Исправленные практики представлены ниже:
 
-![image](https://github.com/user-attachments/assets/85a4b453-ed62-4991-9fc2-3bea5fd9c1c9)
+![image](https://github.com/user-attachments/assets/c05e5301-d4c2-419b-8cc4-ccf46fd7fc8a)
 
-![image](https://github.com/user-attachments/assets/020caf8a-bf42-4536-b03c-cb91c6928f5c)
+
+![image](https://github.com/user-attachments/assets/7b76db85-bdc6-4694-b353-27374fd0371b)
+
 
 
 1. Для исправления первой плохой практики мы разбили `build`  и `tests` на отдельные этапы. Код стал более понятным и простым для отладки в случае ошибок, а также это повлияло на его гибкость, то есть упростило добавление/изменение этапов, их возможное повторное использование.
