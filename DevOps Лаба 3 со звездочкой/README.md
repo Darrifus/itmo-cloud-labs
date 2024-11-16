@@ -12,8 +12,8 @@
 ## Начинаем делать лабу
 Мы, когда надо спрятать секреты, хотя больше хочется спрятаться от них:
 
-![image](https://github.com/user-attachments/assets/957e5281-8b41-4b10-83d9-9ef6f734f421)
-![image](https://github.com/user-attachments/assets/d123e9d5-1fea-41b6-a000-53899a0fad42)
+<img src="https://github.com/user-attachments/assets/957e5281-8b41-4b10-83d9-9ef6f734f421" width="350" />
+<img src="https://github.com/user-attachments/assets/d123e9d5-1fea-41b6-a000-53899a0fad42" width="350" />
 
 
 
@@ -27,11 +27,11 @@
 
 
 Мы, преисполнившись в хранении секретов:
-![image](https://github.com/user-attachments/assets/fae524d9-754c-4941-962b-6539a393b955)
+<img src="https://github.com/user-attachments/assets/d123e9d5-1fea-41b6-a000-53899a0fad42" width="350" />
 
 ## Это мы гордимся проделанной работой и отдыхаем
 
-![image](https://github.com/user-attachments/assets/a22df629-e48a-49a9-875c-b1b54958fcc7)
+<img src="https://github.com/user-attachments/assets/d123e9d5-1fea-41b6-a000-53899a0fad42" width="350" />
 
 
 
