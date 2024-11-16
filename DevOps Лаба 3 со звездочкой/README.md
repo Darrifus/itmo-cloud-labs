@@ -27,11 +27,11 @@
 
 
 Мы, преисполнившись в хранении секретов:
-<img src="https://github.com/user-attachments/assets/d123e9d5-1fea-41b6-a000-53899a0fad42" width="350" />
+<img src="https://github.com/user-attachments/assets/a8cdc12f-4d3d-4415-a428-2f5527a83ded" width="350" />
 
 ## Это мы гордимся проделанной работой и отдыхаем
 
-<img src="https://github.com/user-attachments/assets/d123e9d5-1fea-41b6-a000-53899a0fad42" width="350" />
+<img src="https://github.com/user-attachments/assets/94bcd8c4-36ea-4c18-b247-df7315dfcb07" width="350" />
 
 
 
