@@ -1,1 +1,36 @@
+name: Secure CI/CD with Vault
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  secure-build:
+    runs-on: ubuntu-22.04 
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Vault CLI
+        run: |
+          curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+          sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+          sudo apt-get update && sudo apt-get install vault
+
+      - name: Fetch secrets from Vault
+        env:
+          VAULT_ADDR: ${{ secrets.VAULT_ADDR }}
+          VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
+        run: |
+          SECRET=$(vault kv get -field=MY_SECRET secret/ci-cd)
+          echo "::add-mask::$SECRET"
+          echo "Секрет успешно получен и скрыт в логах"
+
+      - name: Use secret in build
+        run: |
+          echo "Using secret in the build process"
+        
 
