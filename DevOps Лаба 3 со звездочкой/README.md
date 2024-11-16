@@ -12,8 +12,8 @@
 ## Начинаем делать лабу
 Мы, когда надо сделать так, чтобв паплайн ходил туда, не знаю куда, чтобы брать секрет:
 
-<img src="https://github.com/user-attachments/assets/0ad0e751-d15f-4097-b3a7-5d1dd24dc406" high="250" />
-<img src="https://github.com/user-attachments/assets/9341b470-45e8-4dac-be45-d98f248d40cb" high="250" />
+<img src="https://github.com/user-attachments/assets/0ad0e751-d15f-4097-b3a7-5d1dd24dc406" high="100" />
+<img src="https://github.com/user-attachments/assets/9341b470-45e8-4dac-be45-d98f248d40cb" high="100" />
 
 
 
