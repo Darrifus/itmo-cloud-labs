@@ -1,3 +1,4 @@
+
 name: Bad practices in CI/CD
 
 on: 
@@ -8,7 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    timeout-minutes: 30
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -21,9 +21,15 @@ jobs:
         
   deploy:
     runs-on: ubuntu-22.04
-    timeout-minutes: 30
+    environment: production 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Ensure deploy script is executable
+        run: chmod +x ./deploy.sh
       - name: Deploy application
-        run: ./deploy.sh
+        env:  
+          DEPLOY_PATH: /usr/share/nginx/html
+        run: |
+          echo "Deploying to $DEPLOY_PATH"
+          ./deploy.sh
