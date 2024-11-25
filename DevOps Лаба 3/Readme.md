@@ -91,6 +91,18 @@
 ![image](https://github.com/user-attachments/assets/25767ac9-3618-4225-9d14-f18cca62bf77)
 
 
+
+![image](https://github.com/user-attachments/assets/5b1626d0-9229-4e22-a63c-ca637f6b0fdf)
+
+![image](https://github.com/user-attachments/assets/8e608f3b-0e78-4536-882d-9430842bc2c9)
+
+![image](https://github.com/user-attachments/assets/1d38c187-538e-4e51-9ea0-47d93921de3f)
+
+![image](https://github.com/user-attachments/assets/271200a7-244a-4eac-9116-a13e50beb160)
+![image](https://github.com/user-attachments/assets/436eaf2e-cb08-4dce-9924-9d1899106ca1)
+
+
+
 ### История про Васю
 Мы до прочтения истории про Васю:
 
