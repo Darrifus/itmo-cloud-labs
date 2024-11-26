@@ -81,13 +81,14 @@
 
 
 CI/CD файлы были запущены, скрины из Github Actions представлены ниже:
-**Bad practices: **
+
+**Bad practices:
 
 ![image](https://github.com/user-attachments/assets/5b1626d0-9229-4e22-a63c-ca637f6b0fdf)
 
 ![image](https://github.com/user-attachments/assets/8e608f3b-0e78-4536-882d-9430842bc2c9)
 
-**Good practices:**
+**Good practices:
 ![image](https://github.com/user-attachments/assets/1d38c187-538e-4e51-9ea0-47d93921de3f)
 
 ![image](https://github.com/user-attachments/assets/271200a7-244a-4eac-9116-a13e50beb160)
