@@ -80,9 +80,9 @@
 ![image](https://github.com/user-attachments/assets/06b0a87a-4653-4f65-b2dd-bf1984fe3c41)
 
 
-CI/CD файлы были запущены, скрины из Github Actions представлены ниже:
+### Запуск пайплайнов:
 
-**Bad practices:
+**Bad practices:**
 
 ![image](https://github.com/user-attachments/assets/5b1626d0-9229-4e22-a63c-ca637f6b0fdf)
 
