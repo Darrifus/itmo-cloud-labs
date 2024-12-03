@@ -22,6 +22,22 @@
 ### Описание сервисов
 А теперь подробно опишем каждый из сервисов, чтобы стало более понятно, почему мы заполнили табличку именно так.
 #### AmazonAthena
+#### AmazonS3
+#### APNFee
+#### AmazonAppStream
+#### AmazonLex
+#### AmazonLightsail
+#### AmazonNeptune
+#### AmazonManagedBlockchain
+#### AmazonMacie
+#### AmazonML
+#### AWSConfig
+#### AWSCostExplorer
+#### AWSGlobalAccelerator
+#### AWSGlue
+#### AWSGreengrass
+
+
 
 
 
