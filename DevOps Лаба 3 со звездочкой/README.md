@@ -30,7 +30,8 @@
 
 Был создан `DOPPLER_TOKEN`, который предоставляет нашему пайплайну доступ к Doppler для работы с секретами:
 
-![image](https://github.com/user-attachments/assets/7831ca75-d7d7-46ef-8c0c-93b2a237c4a0)
+![image](https://github.com/user-attachments/assets/0f3c9ef8-2df0-4f00-a5a2-89644c364835)
+
 
 После этого переходим в наш репозиторий в Github и в настройках добавляем сгенерированный ранее токен как секрет:
 
